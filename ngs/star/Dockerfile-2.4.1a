@@ -1,0 +1,8 @@
+FROM compgen/samtools:1.2
+MAINTAINER Marcus R. Breese <marcus@breese.com>
+
+RUN yum install -y vim-common gcc-c++ && yum clean all && cd /tmp && \
+    curl -OL https://github.com/alexdobin/STAR/archive/STAR_2.4.1a.tar.gz && \
+    tar xf STAR_2.4.1a.tar.gz && cd STAR-STAR_2.4.1a/source &&\
+    make && cp STAR /usr/local/bin && \
+    cd / && rm -rf /tmp/STAR*

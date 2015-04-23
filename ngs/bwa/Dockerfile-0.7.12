@@ -1,0 +1,8 @@
+FROM compgen/samtools:1.2
+MAINTAINER Marcus R. Breese <marcus@breese.com>
+
+RUN cd /tmp && \
+    curl -OL http://downloads.sourceforge.net/project/bio-bwa/bwa-0.7.12.tar.bz2 && \
+    tar xf bwa-0.7.12.tar.bz2 && cd bwa-0.7.12 &&\
+    make && cp bwa /usr/local/bin && cp bwa.1 /usr/share/man/man1 && \
+    cd / && rm -rf /tmp/bwa*
