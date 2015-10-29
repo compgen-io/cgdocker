@@ -1,4 +1,4 @@
-FROM compgen/samtools:1.2
+FROM compgen/ngs-base:0.1
 MAINTAINER Marcus R. Breese <marcus@breese.com>
 
 RUN yum install -y vim-common gcc-c++ && yum clean all && cd /tmp && \

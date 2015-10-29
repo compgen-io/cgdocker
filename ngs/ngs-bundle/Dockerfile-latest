@@ -1,4 +1,0 @@
-FROM compgen/samtools:1.2
-FROM compgen/bwa:0.7.12
-FROM compgen/star:2.4.1a
-MAINTAINER Marcus R. Breese <marcus@breese.com>
